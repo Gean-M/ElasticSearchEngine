@@ -1,0 +1,40 @@
+@import "@fontsource/ibm-plex-serif/400.css";
+@import "@fontsource/ibm-plex-serif/600.css";
+@import "@fontsource/ibm-plex-sans/400.css";
+@import "@fontsource/ibm-plex-sans/500.css";
+@import "@fontsource/ibm-plex-sans/600.css";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-paper text-ink font-sans antialiased;
+}
+
+/* Trecho destacado pelo highlight do Elasticsearch (<b>...</b>) */
+mark,
+b.es-highlight {
+  background: none;
+  color: inherit;
+  font-weight: 600;
+  border-bottom: 2px solid theme("colors.amber");
+}
+
+::selection {
+  background: theme("colors.amber");
+  color: theme("colors.ink");
+}
+
+:focus-visible {
+  outline: 2px solid theme("colors.amber-dark");
+  outline-offset: 2px;
+}

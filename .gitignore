@@ -1,0 +1,14 @@
+# Dependências e builds (recriados pelo Docker/CI - não versionar)
+node_modules/
+dist/
+backend/dist/
+frontend/dist/
+*.tsbuildinfo
+
+# Editor / SO
+.DS_Store
+.idea/
+*.iml
+
+# Logs
+npm-debug.log*
